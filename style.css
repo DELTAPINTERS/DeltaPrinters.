@@ -1,0 +1,255 @@
+:root{
+--gold:#D4AF37;
+--black:#080808;
+--white:#ffffff;
+--whatsapp:#25D366;
+}
+
+/* ================= RESET ================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:radial-gradient(circle,#1a1a1a,#080808);
+color:white;
+font-family:'Space Grotesk',sans-serif;
+overflow-x:hidden;
+}
+
+/* ================= STAR CANVAS ================= */
+
+#stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
+}
+
+/* ================= NAV BAR ================= */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+z-index:1000;
+}
+
+/* LOGO */
+
+.nav-logo{
+font-family:'Unbounded';
+font-size:1.6rem;
+letter-spacing:4px;
+font-weight:900;
+
+background:linear-gradient(90deg,#b8962e,#ffd966,#d4af37,#ffd966);
+-webkit-background-clip:text;
+background-clip:text;
+-webkit-text-fill-color:transparent;
+
+text-shadow:0 0 12px rgba(212,175,55,0.45);
+}
+
+/* MENU LINKS DESKTOP */
+
+.nav-center-links{
+display:flex;
+gap:32px;
+}
+
+.nav-center-links a{
+text-decoration:none;
+font-family:'Unbounded';
+font-size:0.8rem;
+letter-spacing:2px;
+color:var(--gold);
+transition:0.3s;
+
+opacity:1 !important;
+visibility:visible !important;
+display:inline-block
+}
+
+.nav-center-links a:hover{
+text-shadow:0 0 8px rgba(212,175,55,0.6);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:0 8%;
+position:relative;
+z-index:5;
+}
+
+.hero-content{
+flex:1;
+}
+
+.subtitle{
+letter-spacing:6px;
+color:var(--gold);
+font-size:0.8rem;
+}
+
+.hero-title{
+font-family:'Unbounded';
+font-size:4rem;
+margin:20px 0;
+}
+
+.hero-title span{
+color:var(--gold);
+}
+
+.hero-desc{
+opacity:0.7;
+line-height:1.7;
+max-width:450px;
+margin-bottom:30px;
+}
+
+/* BUTTON */
+
+.cta-btn{
+padding:14px 40px;
+background:var(--gold);
+color:black;
+font-family:'Unbounded';
+text-decoration:none;
+border-radius:6px;
+display:inline-block;
+transition:0.3s;
+}
+
+.cta-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 30px rgba(212,175,55,0.5);
+}
+
+/* ================= ROBOT ================= */
+
+.robot-container{
+flex:1.2;
+height:90vh;
+max-width:60%;
+}
+
+spline-viewer{
+width:100%;
+height:100%;
+}
+
+/* ================= WHATSAPP ================= */
+
+.fab-container{
+position:fixed;
+bottom:30px;
+right:30px;
+z-index:1000;
+}
+
+.fab{
+width:55px;
+height:55px;
+border-radius:50%;
+background:var(--whatsapp);
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:22px;
+text-decoration:none;
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:1024px){
+
+.hero-title{
+font-size:3.2rem;
+}
+
+.robot-container{
+height:70vh;
+max-width:100%;
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+/* NAV STACK */
+
+nav{
+flex-direction:column;
+gap:12px;
+padding:16px 6%;
+}
+
+.nav-logo{
+font-size:1.6rem;
+text-align:center;
+}
+
+/* BUTTON GRID */
+
+.nav-center-links{
+display:grid;
+grid-template-columns:repeat(4,auto);
+gap:8px;
+justify-content:center;
+}
+
+.nav-center-links a{
+font-size:0.6rem;
+padding:10px 5px;
+border:1px solid var(--gold);
+border-radius:20px;
+text-align:center;
+}
+
+/* HERO STACK */
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding-top:230px;
+}
+
+.hero-title{
+font-size:2.4rem;
+}
+
+.hero-desc{
+margin:auto;
+}
+
+.robot-container{
+height:45vh;
+max-width:70%;
+
+}
+
+.cta-btn{
+padding:12px 28px;
+font-size:0.7rem;
+}
+
+}
